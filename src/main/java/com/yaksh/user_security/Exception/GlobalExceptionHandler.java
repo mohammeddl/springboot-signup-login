@@ -19,7 +19,6 @@ public class GlobalExceptionHandler {
         errorDetails.setTimeStamp(LocalDateTime.now());
         errorDetails.setErrorCode(e.getErrorCode().name());
 
-        // Function: Set different HTTP status codes based on errorCode
         if (e.getErrorCode()==ErrorCode.USER_ALREADY_EXISTS
                 ||e.getErrorCode()==ErrorCode.INVALID_EMAIL
                 ||e.getErrorCode()==ErrorCode.INVALID_PASSWORD
